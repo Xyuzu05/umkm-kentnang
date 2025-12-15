@@ -1,0 +1,17 @@
+/* KONTAK.CSS – Halaman Kontak */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfaf5;
+  color: #333;
+}
+
+h1 {
+  color: #532a10;
+}
+
+/* Biar error-nya rapih */
+.error {
+  display: block;
+  min-height: 1rem;
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kentang Goreng Kriuk - Produk</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- CSS khusus produk -->
+  <link rel="stylesheet" href="produk.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+           <img src="images/logo.png" alt="Logo Kentang Goreng Kriuk"
+             width="40" height="40" class="me-2 rounded-circle">
+           Kentang Goreng Kriuk
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link active" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <h1 class="mb-4">Produk Kentang Goreng Kami</h1>
+    <p class="mb-4">
+      Berikut daftar produk Kentang Goreng Kriuk yang kami sediakan. Semua produk digoreng
+      fresh setelah dipesan, menggunakan kentang pilihan berkualitas.
+    </p>
+
+    <!-- Tabel Produk -->
+    <div class="table-responsive mb-5">
+      <table class="table table-bordered table-striped align-middle">
+        <thead class="table-warning">
+          <tr>
+            <th>Produk</th>
+            <th>Porsi</th>
+            <th>Harga</th>
+            <th>Kategori Menu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kentang Goreng Original</td>
+            <td>Cup S</td>
+            <td>Rp 15.000</td>
+            <td rowspan="2">Kentang Cup</td>
+          </tr>
+          <tr>
+            <td>Kentang Goreng BBQ</td>
+            <td>Cup M</td>
+            <td>Rp 18.000</td>
+          </tr>
+          <tr>
+            <td>Kentang Goreng Balado</td>
+            <td>Box 250 g</td>
+            <td>Rp 22.000</td>
+            <td rowspan="3">Kentang Box</td>
+          </tr>
+          <tr>
+            <td>Kentang Goreng Keju</td>
+            <td>Box 300 g</td>
+            <td>Rp 25.000</td>
+          </tr>
+          <tr>
+            <td>Kentang Goreng Pedas Level 3</td>
+            <td>Box 300 g</td>
+            <td>Rp 26.000</td>
+          </tr>
+          <tr>
+            <td>Kentang Goreng Frozen (Siap Goreng)</td>
+            <td>Paket 1 kg</td>
+            <td>Rp 55.000</td>
+            <td>Kentang Frozen</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="text-center table-secondary">
+              Semua harga sudah termasuk PPN
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Card Produk Utama & Layanan -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-6">
+        <div class="card shadow h-100">
+          <img src="images/kentang.jpg" class="card-img-top" alt="Kentang Goreng Original">
+          <div class="card-body">
+            <h5 class="card-title">Kentang Goreng Original</h5>
+            <p class="card-text">
+              Kentang goreng dengan bumbu gurih, renyah di luar dan lembut di dalam. Cocok untuk segala suasana.
+            </p>
+            <p class="mb-1 fw-semibold">Rating Produk: <span id="hasil-rating"></span></p>
+            <small class="text-muted">Rating diisi otomatis dengan JavaScript.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <h3>Layanan Unggulan</h3>
+        <ul id="layanan-list" class="list-group list-group-flush mb-3">
+          <!-- Diisi via JS -->
+        </ul>
+        <p class="text-muted">
+          Kami selalu berusaha memberikan pelayanan terbaik untuk pelanggan Kentang Goreng Kriuk.
+        </p>
+      </div>
+    </div>
+
+    <!-- Form Pemesanan -->
+    <section class="mb-5">
+      <h2 class="mb-3">Form Pemesanan Cepat</h2>
+      <form id="formPemesanan" class="row g-3">
+        <div class="col-md-6">
+          <label for="namaProduk" class="form-label">Nama Produk</label>
+          <input type="text" id="namaProduk" class="form-control" placeholder="Contoh: Kentang Goreng Original">
+          <div class="text-danger small" id="errorNamaProduk"></div>
+        </div>
+        <div class="col-md-3">
+          <label for="jumlah" class="form-label">Jumlah</label>
+          <input type="number" id="jumlah" class="form-control" placeholder="Contoh: 2">
+          <div class="text-danger small" id="errorJumlah"></div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Pesan Sekarang</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Media: Audio & Video -->
+    <section class="mb-5">
+      <h2 class="mb-3">Cerita & Dokumentasi</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5>Cerita Singkat UMKM</h5>
+          <audio controls class="w-100">
+            <source src="audio/OkeGas.mp3" type="audio/mpeg" />
+            Browser Anda tidak mendukung pemutaran audio.
+          </audio>
+        </div>
+        <div class="col-md-6">
+          <h5>Video Produksi</h5>
+          <video class="w-100" height="240" controls>
+            <source src="videos/VidKentang.mp4" type="video/mp4" />
+            Browser Anda tidak mendukung pemutaran video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wishlist Produk & Tema -->
+    <section class="mb-4">
+      <h2 class="mb-3">Wishlist Produk</h2>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="produkInput" class="form-label">Nama produk</label>
+          <input type="text" id="produkInput" class="form-control" placeholder="Masukkan nama produk...">
+          <div class="form-text">Preview: <span id="previewProduk"></span></div>
+        </div>
+        <div class="col-md-3 d-flex align-items-end">
+          <button id="tambahBtn" class="btn btn-success w-100">Tambah ke Wishlist</button>
+        </div>
+        <div class="col-md-3">
+          <label for="temaSelect" class="form-label">Tema Warna Halaman</label>
+          <select id="temaSelect" class="form-select">
+            <option value="default">Default</option>
+            <option value="white">Putih</option>
+            <option value="lightblue">Biru Muda</option>
+            <option value="lightyellow">Kuning Muda</option>
+          </select>
+        </div>
+      </form>
+
+      <ul id="daftarProduk" class="mt-3">
+        <!-- Diisi via JS -->
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light text-center py-3 mt-4">
+    <p class="mb-0">&copy; 2025 Kentang Goreng Kriuk. Hak cipta dilindungi.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS khusus halaman produk -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Set rating produk
+      const ratingSpan = document.getElementById("hasil-rating");
+      if (ratingSpan) {
+        ratingSpan.textContent = "4.8 / 5.0";
+      }
+
+      // 2. Isi layanan unggulan
+      const layanan = [
+        "Kentang digoreng fresh setelah dipesan",
+        "Tersedia pembayaran di tempat (COD)",
+        "Garansi rasa dan kualitas",
+      ];
+      const layananList = document.getElementById("layanan-list");
+      if (layananList) {
+        layanan.forEach(function (item) {
+          const li = document.createElement("li");
+          li.textContent = item;
+          li.classList.add("list-group-item");
+          layananList.appendChild(li);
+        });
+      }
+
+      // 3. Form pemesanan
+      const formPemesanan = document.getElementById("formPemesanan");
+      const inputNamaProduk = document.getElementById("namaProduk");
+      const inputJumlah = document.getElementById("jumlah");
+      const errorNamaProduk = document.getElementById("errorNamaProduk");
+      const errorJumlah = document.getElementById("errorJumlah");
+
+      if (formPemesanan) {
+        formPemesanan.addEventListener("submit", function (e) {
+          e.preventDefault();
+          errorNamaProduk.textContent = "";
+          errorJumlah.textContent = "";
+
+          let valid = true;
+
+          if (inputNamaProduk.value.trim() === "") {
+            errorNamaProduk.textContent = "Nama produk wajib diisi.";
+            valid = false;
+          }
+
+          if (inputJumlah.value.trim() === "") {
+            errorJumlah.textContent = "Jumlah wajib diisi.";
+            valid = false;
+          } else if (Number(inputJumlah.value) <= 0) {
+            errorJumlah.textContent = "Jumlah harus lebih dari 0.";
+            valid = false;
+          }
+
+          if (!valid) return;
+
+          alert(
+            "Pemesanan berhasil!\n\n" +
+            "Produk : " + inputNamaProduk.value +
+            "\nJumlah : " + inputJumlah.value
+          );
+
+          formPemesanan.reset();
+        });
+      }
+
+      // 4. Wishlist + Tema warna
+      const produkInput = document.getElementById("produkInput");
+      const tambahBtn = document.getElementById("tambahBtn");
+      const daftarProduk = document.getElementById("daftarProduk");
+      const previewProduk = document.getElementById("previewProduk");
+      const temaSelect = document.getElementById("temaSelect");
+
+      if (produkInput && tambahBtn && daftarProduk && previewProduk && temaSelect) {
+        // Preview saat mengetik
+        produkInput.addEventListener("keyup", function () {
+          previewProduk.textContent = produkInput.value;
+        });
+
+        // Tambah ke wishlist
+        tambahBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          const namaProduk = produkInput.value.trim();
+          if (namaProduk !== "") {
+            const li = document.createElement("li");
+            li.textContent = namaProduk;
+            li.style.cursor = "pointer";
+
+            li.addEventListener("mouseover", () => {
+              li.style.backgroundColor = "#f1f1f1";
+            });
+            li.addEventListener("mouseout", () => {
+              li.style.backgroundColor = "";
+            });
+            li.addEventListener("dblclick", () => {
+              if (confirm("Yakin ingin menghapus produk ini dari wishlist?")) {
+                li.remove();
+              }
+            });
+
+            daftarProduk.appendChild(li);
+            produkInput.value = "";
+            previewProduk.textContent = "";
+          }
+        });
+
+        // Ubah tema
+        temaSelect.addEventListener("change", function () {
+          const value = temaSelect.value;
+          if (value === "default") {
+            document.body.style.backgroundColor = "#fdfaf5";
+          } else {
+            document.body.style.backgroundColor = value;
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

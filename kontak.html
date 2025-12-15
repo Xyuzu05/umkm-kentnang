@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kentang Goreng Kriuk - Kontak</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- CSS khusus kontak -->
+  <link rel="stylesheet" href="kontak.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+           <img src="images/logo.png" alt="Logo Kentang Goreng Kriuk"
+             width="40" height="40" class="me-2 rounded-circle">
+           Kentang Goreng Kriuk
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link active" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <h1 class="mb-3">Hubungi Kami</h1>
+    <p class="mb-4">
+      Silakan isi formulir berikut untuk menghubungi tim <strong>Kentang Goreng Kriuk</strong>.
+      Kami akan berusaha merespons secepat mungkin.
+    </p>
+
+    <form id="formKontak" class="row g-3">
+      <div class="col-md-6">
+        <label for="nama" class="form-label">Nama</label>
+        <input type="text" id="nama" name="nama" class="form-control" />
+        <span class="error text-danger small" id="errorNama"></span>
+      </div>
+
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" name="email" class="form-control" />
+        <span class="error text-danger small" id="errorEmail"></span>
+      </div>
+
+      <div class="col-md-6">
+        <label for="kategori" class="form-label">Kategori Pesan</label>
+        <select id="kategori" name="kategori" class="form-select">
+          <option value="">-- Pilih Kategori --</option>
+          <option value="Umum">Umum</option>
+          <option value="Produk">Produk</option>
+          <option value="Kerja Sama">Kerja Sama</option>
+        </select>
+        <span class="error text-danger small" id="errorKategori"></span>
+      </div>
+
+      <div class="col-12">
+        <label for="pesan" class="form-label">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="5" class="form-control"></textarea>
+        <span class="error text-danger small" id="errorPesan"></span>
+      </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="langganan" name="langganan" value="ya">
+          <label class="form-check-label" for="langganan">
+            Saya ingin menerima newsletter promo Kentang Goreng Kriuk
+          </label>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Kirim</button>
+        <p id="errorMsg" class="mt-2 text-danger small"></p>
+      </div>
+    </form>
+  </main>
+
+  <footer class="bg-dark text-light text-center py-3 mt-4">
+    <p class="mb-0">&copy; 2025 Kentang Goreng Kriuk</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS modul -->
+  <script type="module" src="js/form.js"></script>
+  <script type="module" src="js/newsletter.js"></script>
+</body>
+</html>

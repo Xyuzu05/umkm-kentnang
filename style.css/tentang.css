@@ -1,0 +1,16 @@
+/* TENTANG.CSS – Halaman Tentang Kami */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfaf5;
+  color: #333;
+}
+
+main p {
+  text-align: justify;
+}
+
+/* Biar gambar di kiri tidak terlalu besar di layar kecil */
+img.img-fluid.rounded.shadow {
+  max-width: 320px;
+}

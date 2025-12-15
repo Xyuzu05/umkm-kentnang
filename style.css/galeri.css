@@ -1,0 +1,22 @@
+/* GALERI.CSS – Halaman Galeri */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfaf5;
+  color: #333;
+}
+
+/* Biar judul sedikit menonjol */
+h1 {
+  color: #532a10;
+}
+
+/* Card galeri */
+.card-img-top {
+  object-fit: cover;
+  height: 220px;
+}
+
+.card-text {
+  font-size: 0.95rem;
+}

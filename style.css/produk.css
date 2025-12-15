@@ -1,0 +1,24 @@
+/* PRODUK.CSS – Halaman Produk Kentang Goreng */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfaf5;
+  color: #333;
+}
+
+h1, h2 {
+  color: #532a10;
+}
+
+/* Supaya daftar wishlist tidak mepet */
+#daftarProduk {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+/* Sedikit styling untuk ulasan layanan */
+#layanan-list .list-group-item {
+  background-color: transparent;
+  border: none;
+  padding-left: 0;
+}
