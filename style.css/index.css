@@ -1,18 +1,16 @@
-/* INDEX.CSS – Halaman Beranda Kentang Goreng Kriuk */
 
-/* Base */
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fdfaf5; /* agak krem, biar hangat kayak kentang goreng */
+  background-color: #fdfaf5; 
   color: #333;
   margin: 0;
 }
 
-/* Hero – bagian paling atas dengan background foto */
+
 .hero {
   min-height: 70vh;
   background:
@@ -30,7 +28,7 @@ section h2 {
   color: #532a10;
 }
 
-/* List keunggulan (pakai list-group Bootstrap tapi kita halusin sedikit) */
+
 .list-group-item {
   border: none;
   background-color: transparent;
